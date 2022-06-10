@@ -1,0 +1,30 @@
+
+.button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: 0.7s;
+}
+
+.button-container{
+    width: 15vw;
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 2.5em;
+    font-weight: 700;
+    transition: 0.7s;
+}
+
+.button-container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}

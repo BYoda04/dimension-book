@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import './styles/changeMood.css'
+import { HashRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
+import Nav from './components/Nav';
+import { useSelector } from 'react-redux';
 
 function App() {
+
+  const mood = useSelector(state=>state.mood)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <div className={mood? 'App nigth-mood' : 'App day-mood' }>
+        <Nav />
+          <Routes>
+
+            <Route path="/" element={<Home />} />
+
+          </Routes>
+      </div>
+    </HashRouter>
   );
 }
 
